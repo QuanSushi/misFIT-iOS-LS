@@ -1,11 +1,10 @@
 $(document).ready(function() {
-	var $hour = $('h');
 	/* 
 	 * This method hides all circles
 	 */
 	$('#hour0, #hour1, #hour2, #hour3, #hour4, #hour5, #hour6, #hour7, #hour8, #hour9, #hour10, #hour11').fadeTo(0, 0.1); //hide alle circles
-	$('#hour0, #hour1, #hour2, #hour3, #hour4, #hour5, #hour6, #hour7, #hour8, #hour9, #hour10, #hour11').click(function(){
-		$(this).fadeTo(1500, 1);
+	$('#hour0, #hour1, #hour2, #hour3, #hour4, #hour5, #hour6, #hour7, #hour8, #hour9, #hour10, #hour11').click(function() {
+		$(this).fadeTo(500, 1);
 	});
 	showHour();
 	showMinutes();
@@ -18,7 +17,9 @@ var currentTime = new Date();
 	h = currentTime.getHours() % 12;
 	m = Math.round(currentTime.getMinutes() / 5);
 }
-
+/*
+ *This method calls hour and lights the hour circle up
+ */
 function showHour() {
 		getTime();
 			switch (h) {
@@ -29,7 +30,7 @@ function showHour() {
 					break;
 				case 1 :
 					$(document).ready(function() {
-						$('#hour1').fadeTo(500, 1);	
+						$('#hour1').fadeTo(500, 1);
 					});				
 					break;
 				case 2 :
@@ -85,7 +86,9 @@ function showHour() {
 				default : break;
 			}
 }
-
+/*
+ *This method calls minutes and blinks the minutes circle
+ */
 function showMinutes() {
 			switch (m) {
 				case 0 :
