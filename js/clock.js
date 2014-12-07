@@ -5,6 +5,7 @@ $(document).ready(function() {
 	$('#hour0, #hour1, #hour2, #hour3, #hour4, #hour5, #hour6, #hour7, #hour8, #hour9, #hour10, #hour11').fadeTo(0, 0.1); //hide alle circles
 	$('#hour0, #hour1, #hour2, #hour3, #hour4, #hour5, #hour6, #hour7, #hour8, #hour9, #hour10, #hour11').click(function() {
 		$(this).fadeTo(500, 1);
+	});
 	$('#hour0, #hour1, #hour2, #hour3, #hour4, #hour5, #hour6, #hour7, #hour8, #hour9, #hour10, #hour11').click(function() {
 		$(this).fadeTo(1000, 0.1);
 	});
