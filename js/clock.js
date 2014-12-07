@@ -3,6 +3,7 @@ $(document).ready(function() {
 	 * This method hides all circles
 	 */
 	$('div').fadeTo(0, 0.1); //hide alle circles
+	$('#battery').fadeTo(0, 1);
 	$('div').click(function() {
 		$(this).fadeTo(500, 1);
 	});
@@ -12,9 +13,11 @@ $(document).ready(function() {
 	showHour();
 	showMinutes();
 });
-
-
 //get time
+var h;
+var m;
+var s;
+
 function getTime() {
 var currentTime = new Date();
 	h = currentTime.getHours() % 12;
