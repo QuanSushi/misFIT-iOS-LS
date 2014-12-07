@@ -1,0 +1,166 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>misFIT</title>
+		<script src="/js/hide.js"></script>
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<script type="text/javascript">
+		//opacity of clock elements to 0.1
+		var opacity
+		function hide(Element) {
+			Element.style.opacity = 0.1;
+		}
+
+		//get time
+		var h; //hours
+		var m; //minutes
+		function getTime() {
+			var currentTime = new Date();
+			h = currentTime.getHours() % 12;
+			m = Math.round(currentTime.getMinutes() / 5);
+		}
+
+		//show hour
+		function showHour () {
+			getTime();
+			switch (h) {
+				case 0 :
+					setTimeout(function() {hour0.style.opacity = 1.0}, 500);
+					break;
+				case 1 :
+					setTimeout(function() {hour1.style.opacity = 1.0}, 500);
+					break;
+				case 2 :
+					setTimeout(function() {hour2.style.opacity = 1.0}, 500);
+					break;
+				case 3 :
+					setTimeout(function() {hour3.style.opacity = 1.0}, 500);
+					break;
+				case 4 :
+					setTimeout(function() {hour4.style.opacity = 1.0}, 500);
+					break;
+				case 5 :
+					setTimeout(function() {hour5.style.opacity = 1.0}, 500);
+					break;
+				case 6 :
+					setTimeout(function() {hour6.style.opacity = 1.0}, 500);
+					break;
+				case 7 :
+					setTimeout(function() {hour7.style.opacity = 1.0}, 500);
+					break;
+				case 8 :
+					setTimeout(function() {hour8.style.opacity = 1.0}, 500);
+					break;
+				case 9 :
+					setTimeout(function() {hour9.style.opacity = 1.0}, 500);
+					break;
+				case 10 :
+					setTimeout(function() {hour10.style.opacity = 1.0}, 500);
+					break;
+				case 11 :
+					setTimeout(function() {hour11.style.opacity = 1.0}, 500);
+					break;
+				default : break;
+			}
+
+			switch (m) {
+				case 0 :
+					setTimeout(function() {hour0.style.opacity = 1.0}, 1500);
+					break;
+				case 1 :
+					setTimeout(function() {hour1.style.opacity = 1.0}, 1500);
+					break;
+				case 2 :
+					setTimeout(function() {hour2.style.opacity = 1.0}, 1500);
+					break;
+				case 3 :
+					setTimeout(function() {hour3.style.opacity = 1.0}, 1500);
+					break;
+				case 4 :
+					setTimeout(function() {hour4.style.opacity = 1.0}, 1500);
+					break;
+				case 5 :
+					setTimeout(function() {hour5.style.opacity = 1.0}, 1500);
+					break;
+				case 6 :
+					setTimeout(function() {hour6.style.opacity = 1.0}, 1500);
+					break;
+				case 7 :
+					setTimeout(function() {hour7.style.opacity = 1.0}, 1500);
+					break;
+				case 8 :
+					setTimeout(function() {hour8.style.opacity = 1.0}, 1500);
+					break;
+				case 9 :
+					setTimeout(function() {hour9.style.opacity = 1.0}, 1500);
+					break;
+				case 10 :
+					setTimeout(function() {hour10.style.opacity = 1.0}, 1500);
+					break;
+				case 11 :
+					setTimeout(function() {hour11.style.opacity = 1.0}, 1500);
+					break;
+				default : break;
+			}
+		}
+
+		//start()
+
+		function init() {
+			hide(hour0);
+			hide(hour1);
+			hide(hour2);
+			hide(hour3);
+			hide(hour4);
+			hide(hour5);
+			hide(hour6);
+			hide(hour7);
+			hide(hour8);
+			hide(hour9);
+			hide(hour10);
+			hide(hour11);
+		}
+
+		function start() {
+			showHour();
+		}
+
+	</script>
+		<div id="clock">
+			<div id="hour0">
+			</div>
+			<div id="hour1">
+			</div>
+			<div id="hour2">
+			</div>
+			<div id="hour3">
+			</div>
+			<div id="hour4">
+			</div>
+			<div id="hour5">
+			</div>
+			<div id="hour6">
+			</div>
+			<div id="hour7">
+			</div>
+			<div id="hour8">
+			</div>
+			<div id="hour9">
+			</div>
+			<div id="hour10">
+			</div>
+			<div id="hour11">
+			</div>
+			<div id="minutes">
+			</div>
+			<div id="stunde">
+			</div>
+		</div>
+		<script type="text/javascript">
+			window.onLoad = init();
+			window.onLoad = start();
+		</script>
+	</body>
+</html>
