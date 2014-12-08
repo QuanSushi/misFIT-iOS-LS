@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function clock() {
 	/* 
 	 * This method hides all circles
 	 */
@@ -10,14 +10,12 @@ $(document).ready(function() {
 	$('div').click(function() {
 		$(this).fadeTo(1000, 0.1);
 	});
+
 	showHour();
 	showMinutes();
+	var t = setTimeout(function(){clock()},60000);
 });
 //get time
-var h;
-var m;
-var s;
-
 function getTime() {
 var currentTime = new Date();
 	h = currentTime.getHours() % 12;
@@ -184,7 +182,7 @@ function showMinutes() {
 						$('#hour9').fadeTo(1000, 0.1);	
 						$('#hour9').fadeTo(1000, 1);
 						$('#hour9').fadeTo(1000, 0.1);
-						$('#hour1').fadeTo(1500, 1);
+						$('#hour9').fadeTo(1500, 1);
 					});	
 					break;
 				case 10 :

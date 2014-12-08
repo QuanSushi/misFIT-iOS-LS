@@ -7,7 +7,8 @@ window.onload = function timer() {
 	h = checkTime(h);
 	m = checkTime(m);
 	s = checkTime(s);
-	document.getElementById('timer').innerHTML = h+":"+m+":"+s;
+	//document.getElementById('timer').innerHTML = h+":"+m+":"+s;
+	document.getElementById('timer').innerHTML = s;
 	var t = setTimeout(function(){timer()},500);
 };
 
