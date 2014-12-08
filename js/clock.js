@@ -2,8 +2,8 @@ $(document).ready(function() {
 	/* 
 	 * This method hides all circles
 	 */
-	$('div').fadeTo(0, 0.1); //hide alle circles
-	$('#battery').fadeTo(0, 1);
+	$('div').fadeTo(1000, 0.1); //hide alle circles
+	$('#timer').fadeTo(500, 1); //unhide clock
 	$('div').click(function() {
 		$(this).fadeTo(500, 1);
 	});
