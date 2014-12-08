@@ -1,20 +1,24 @@
-var percentage = "default";
+var free = "";
 
 $.ajaxSetup({
 cache: false,
 headers: {'Cache-Control': 'no-cache'}
 });
 
-$(document).ready(function() {
-	$('#battery').html(percentage);
-	test();
+function init() {
+
+refreshLocationTimer = setTimeout(init, 2*1000);
+
+jQuery.get('file:///private/var/mobile/Library/BatteryStats.txt', function(appdata) {
+
+var myvar = appdata;
+var substr = appdata.split('\n');
+var free = substr[0].split(':')[1];
+var Used = substr[1].split(':')[1];
+var Total_usable = substr[2].split(':')[1];
+var Total_physical = substr[3].split(':')[1];
+
+document.getElementById("battery").innerHTML = "Battery: " + free;
 });
 
-function test() {
-	$.get('../misFIT/files/BatteryStats.txt', function(appdata) {
-		var myvar = appdata;
-		var substr = appdata.split('\n');
-		var percentage=substr[0].split(':')[1];
-	}, 'text');
-	alert(percentage);
 }
